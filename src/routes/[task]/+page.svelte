@@ -1,12 +1,26 @@
-<div class="flex h-[100vh] w-[100vw] items-center justify-center">
-	<ul id="task">
-		<li>
-			{@html 'setTimeout(() => { console.log("Timeout 1"); Promise.resolve().then(() => { console.log("Promise 1 inside Timeout 1"); }); }, 0);'}
-		</li>
-		<li>
-			{@html 'Promise.resolve().then(() => { console.log("Promise 2"); setTimeout(() => { console.log("Timeout 2 inside Promise 2"); }, 0); });'}
-		</li>
-		<li>console.log("Finish");</li>
-	</ul>
-	<div>Welcome to great village of konoha</div>
-</div>
+<script lang="ts">
+	import task from '$lib/assets/task.png';
+
+	const { form } = $props();
+
+	$effect(() => {
+		typeof form?.solved !== 'undefined' && alert(form.text);
+	});
+</script>
+
+<section class="flex h-[100vh] w-[100vw] items-center justify-center">
+	<div>
+		<h1 class=" text-center text-4xl">Welcome to great village of Konoha!</h1>
+		<span>Solve this challenge to get your path:</span>
+		<form method="POST" action="?/task">
+			<div class="overflow-hidden rounded-2xl border">
+				<img src={task} class=" object-fit w-[650px]" alt="javascript task" />
+			</div>
+			<input name="input" autocomplete="off" class="mt-2 rounded-lg border bg-black p-2" />
+			<button>Submit Result</button>
+		</form>
+	</div>
+</section>
+
+<style>
+</style>
