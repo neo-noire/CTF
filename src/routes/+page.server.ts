@@ -1,9 +1,4 @@
 import type { Actions } from "@sveltejs/kit";
-import type { PageServerLoad } from "./$types";
-
-export const load: PageServerLoad = async ({ request, setHeaders }) => {
-
-}
 
 export const actions = {
     hm: async () => {
@@ -15,6 +10,9 @@ export const actions = {
         setHeaders({
             'Capture-The-Flag-Challenge': 'bWF5YmUgYmV0dGVyIHRyeSAiYW5vdGhlciIgY2x1ZQ=='
         })
+        return {
+            text: "You'd better check somewhere else this time."
+        }
     },
     another: async ({ cookies }) => {
         cookies.set("SUPER_MEGA_SECRET", "WW91IGhhdmUgdG8gZ28gdmlzaXQgL2tvbm9oYS12aWxsYWdlIHRvIG1lZXQgU2Vuc2Vp", { path: '/' })

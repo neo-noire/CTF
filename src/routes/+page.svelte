@@ -3,7 +3,7 @@
 	const { form } = $props();
 
 	$effect(() => {
-		form?.text && console.log(form?.text);
+		form?.text && console.log(`%c${form?.text}`, 'font: 1rem system-ui;');
 	});
 </script>
 
