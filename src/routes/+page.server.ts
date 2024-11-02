@@ -17,9 +17,6 @@ export const actions = {
         })
     },
     another: async ({ cookies }) => {
-        cookies.set("SUPER_MEGA_SECRET", "hello", { path: '/' })
-        return {
-            isOpen: true
-        }
+        cookies.set("SUPER_MEGA_SECRET", "WW91IGhhdmUgdG8gZ28gdmlzaXQgL2tvbm9oYS12aWxsYWdlIHRvIG1lZXQgU2Vuc2Vp", { path: '/' })
     }
 } satisfies Actions;
