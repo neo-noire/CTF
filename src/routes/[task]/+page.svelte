@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import task from '$lib/assets/task.png';
 
 	const { form } = $props();
@@ -12,7 +13,7 @@
 	<div>
 		<h1 class=" text-center text-4xl">Welcome to great village of Konoha!</h1>
 		<span>Solve this challenge to get your path:</span>
-		<form method="POST" action="?/task">
+		<form method="POST" action="?/task" use:enhance>
 			<div class="overflow-hidden rounded-2xl border">
 				<img src={task} class=" object-fit w-[650px]" alt="javascript task" />
 			</div>
