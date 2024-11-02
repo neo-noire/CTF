@@ -7,4 +7,6 @@
 	});
 </script>
 
-<form method="POST" action="?/hm" class="absolute bottom-20 right-20" use:enhance></form>
+<form method="POST" action="?/hm" class="absolute bottom-20 right-20" use:enhance>
+	<span class="sr-only">This might mean something...</span>
+</form>
