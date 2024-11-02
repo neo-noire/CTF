@@ -7,8 +7,4 @@
 	});
 </script>
 
-<form method="POST" action="?/hm" class="absolute bottom-20 right-20" use:enhance>
-	<button>
-		<span class="sr-">Hello</span>
-	</button>
-</form>
+<form method="POST" action="?/hm" class="absolute bottom-20 right-20" use:enhance></form>
